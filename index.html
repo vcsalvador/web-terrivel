@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="../js/script.js" type="text/javascript" charset="utf-8"></script>
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+        <title>Loja de Pedras</title>
+    </head>
+    <body>
+        <fieldset>
+        <form action="https://terrivel.herokuapp.com/monster" method="GET" display="table">
+            <label for="nome">Apelido do monstro: </label>
+            <input type="text" id="nome" placeholder="Apelido ao Monstrinho..." pattern="[a-zA-Z]{1,100}"/>
+            <br>
+            <fieldset>
+                <legend>Dados da compra</legend>
+                <span id="dadoCompra">
+                    <label for="num_pedras"> Pedras: </label>
+                    <input type="number" name="num_pedras" id="num_pedras" min="0" required="true"/>
+                    <br>
+                    <label for="tam_pedras">Tamanho: </label>
+                    <input type="number" name="tam_pedras" id="tam_pedras" min="1" max="7" value="3" step="0.5" required="true"/>
+                    <br>
+                    <label for="tipo_pedras_sortidas">Pedras sortidas?</label>
+                    <input type="checkbox" name="tipo_pedras_sortidas" id="tipo_pedras_sortidas" value="sim"/>
+                    <br>
+                    <span id="tipoPedras">
+                    <label for="tipo_pedras">Tipo da pedra</label>
+                    <select name="tipo_pedras" id="tipo_pedras">
+                        <option value="">--Selecione--</option>
+                        <option value="marroada">Marroada</option>
+                        <option value="ametista">Ametista</option>
+                        <option value="topazio">Topazio</option>
+                        <option value="espinela">Espinela</option>
+                    </select>
+                    </span>
+                </span>
+                <span id="corCeu">
+                    <br>
+                    <label for="corCeu1">Cor 1</label>
+                    <input type="color" name="corCeu1" id="corCeu1"/>
+                    <br>
+                    <label for="corCeu1">Cor 2</label>
+                    <input type="color" name="corCeu2" id="corCeu2"/>
+                </span>
+            </fieldset>
+            <br>
+            <button type="reset" id="limpar">Limpar</button>
+            <button>Enviar</button>
+        </form>
+        </fieldset>
+        
+    </body>
+</html>
